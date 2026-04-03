@@ -1,6 +1,8 @@
 # ClaudeLight for Windows
 
-Windows port of ClaudeLight — a system tray indicator for Anthropic API peak hours.
+Windows port of [ClaudeLight](https://github.com/ailab-dev-tools/ClaudeLight) — a system tray indicator for Anthropic API peak hours.
+
+> Original macOS menu bar app by [ailab-dev-tools](https://github.com/ailab-dev-tools/ClaudeLight). This is an unofficial Windows port.
 
 ## Features
 - 🟢 Green dot = off-peak (full rate limits)
