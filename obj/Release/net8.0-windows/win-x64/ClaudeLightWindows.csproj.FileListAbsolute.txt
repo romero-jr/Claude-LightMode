@@ -1,0 +1,14 @@
+C:\Users\migue\Desktop\CLaudeLIght\obj\Release\net8.0-windows\win-x64\ClaudeLightWindows.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\migue\Desktop\CLaudeLIght\obj\Release\net8.0-windows\win-x64\ClaudeLightWindows.AssemblyInfoInputs.cache
+C:\Users\migue\Desktop\CLaudeLIght\obj\Release\net8.0-windows\win-x64\ClaudeLightWindows.AssemblyInfo.cs
+C:\Users\migue\Desktop\CLaudeLIght\obj\Release\net8.0-windows\win-x64\ClaudeLightWindows.csproj.CoreCompileInputs.cache
+C:\Users\migue\Desktop\CLaudeLIght\bin\Release\net8.0-windows\win-x64\ClaudeLight.exe
+C:\Users\migue\Desktop\CLaudeLIght\bin\Release\net8.0-windows\win-x64\ClaudeLight.deps.json
+C:\Users\migue\Desktop\CLaudeLIght\bin\Release\net8.0-windows\win-x64\ClaudeLight.runtimeconfig.json
+C:\Users\migue\Desktop\CLaudeLIght\bin\Release\net8.0-windows\win-x64\ClaudeLight.dll
+C:\Users\migue\Desktop\CLaudeLIght\bin\Release\net8.0-windows\win-x64\ClaudeLight.pdb
+C:\Users\migue\Desktop\CLaudeLIght\obj\Release\net8.0-windows\win-x64\ClaudeLight.dll
+C:\Users\migue\Desktop\CLaudeLIght\obj\Release\net8.0-windows\win-x64\refint\ClaudeLight.dll
+C:\Users\migue\Desktop\CLaudeLIght\obj\Release\net8.0-windows\win-x64\ClaudeLight.pdb
+C:\Users\migue\Desktop\CLaudeLIght\obj\Release\net8.0-windows\win-x64\ClaudeLightWindows.genruntimeconfig.cache
+C:\Users\migue\Desktop\CLaudeLIght\obj\Release\net8.0-windows\win-x64\ref\ClaudeLight.dll
