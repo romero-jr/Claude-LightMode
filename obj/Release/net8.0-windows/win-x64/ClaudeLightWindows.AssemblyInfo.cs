@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClaudeLight")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e73654a1694bd3b750aeee7a551e97e10b1d4383")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClaudeLight")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClaudeLight")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

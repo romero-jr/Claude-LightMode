@@ -12,3 +12,4 @@ C:\Users\migue\Desktop\CLaudeLIght\obj\Release\net8.0-windows\win-x64\refint\Cla
 C:\Users\migue\Desktop\CLaudeLIght\obj\Release\net8.0-windows\win-x64\ClaudeLight.pdb
 C:\Users\migue\Desktop\CLaudeLIght\obj\Release\net8.0-windows\win-x64\ClaudeLightWindows.genruntimeconfig.cache
 C:\Users\migue\Desktop\CLaudeLIght\obj\Release\net8.0-windows\win-x64\ref\ClaudeLight.dll
+C:\Users\migue\Desktop\CLaudeLIght\obj\Release\net8.0-windows\win-x64\ClaudeLightWindows.sourcelink.json

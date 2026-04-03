@@ -26,7 +26,7 @@ sealed class TrayApplicationContext : ApplicationContext
         // ---- Build context menu ----
         _statusItem      = new ToolStripMenuItem { Enabled = false, Font = BoldFont() };
         _ptTimeItem      = new ToolStripMenuItem { Enabled = false };
-        _scheduleItem    = new ToolStripMenuItem("Mon–Fri  5:00 AM – 11:00 AM PT") { Enabled = false };
+        _scheduleItem    = new ToolStripMenuItem("Mon–Fri  8:00 AM – 2:00 PM ET") { Enabled = false };
 
         var docsItem     = new ToolStripMenuItem("About Peak Hours…");
         docsItem.Click  += (_, _) =>

@@ -7,12 +7,12 @@ namespace ClaudeLight;
 /// </summary>
 sealed class PeakHoursService
 {
-    // Anthropic peak window in PT
-    private const int PeakStartHour = 5;
-    private const int PeakEndHour   = 11;
+    // Anthropic peak window in ET (5–11 AM PT = 8 AM–2 PM ET)
+    private const int PeakStartHour = 8;
+    private const int PeakEndHour   = 14;
 
     private static readonly TimeZoneInfo PacificTZ =
-        GetPacificTimeZone();
+        GetEasternTimeZone();
 
     public bool   IsPeak           { get; private set; }
     public string StatusText       { get; private set; } = "";
@@ -30,14 +30,14 @@ sealed class PeakHoursService
     public void Update()
     {
         var utcNow  = DateTime.UtcNow;
-        var ptNow   = TimeZoneInfo.ConvertTimeFromUtc(utcNow, PacificTZ);
-        var weekday = ptNow.DayOfWeek;
+        var etNow   = TimeZoneInfo.ConvertTimeFromUtc(utcNow, PacificTZ);
+        var weekday = etNow.DayOfWeek;
 
         bool isWeekday     = weekday >= DayOfWeek.Monday && weekday <= DayOfWeek.Friday;
-        bool inPeakWindow  = ptNow.Hour >= PeakStartHour && ptNow.Hour < PeakEndHour;
+        bool inPeakWindow  = etNow.Hour >= PeakStartHour && etNow.Hour < PeakEndHour;
         bool newIsPeak     = isWeekday && inPeakWindow;
 
-        TimeUntilChange = ComputeTimeUntilChange(ptNow, weekday, isWeekday, newIsPeak);
+        TimeUntilChange = ComputeTimeUntilChange(etNow, weekday, isWeekday, newIsPeak);
 
         int h = (int)TimeUntilChange.TotalHours;
         int m = TimeUntilChange.Minutes;
@@ -46,7 +46,7 @@ sealed class PeakHoursService
         StatusText      = newIsPeak
             ? $"Off-peak in {h}h {m}m"
             : $"Peak starts in {h}h {m}m";
-        PacificTimeText = ptNow.ToString("h:mm tt") + " PT";
+        PacificTimeText = etNow.ToString("h:mm tt") + " ET";
 
         // Transition detection: peak → off-peak
         if (_previousIsPeak == true && !newIsPeak)
@@ -103,18 +103,18 @@ sealed class PeakHoursService
     // Timezone helper — handles both Windows and IANA identifiers
     // -------------------------------------------------------------------------
 
-    private static TimeZoneInfo GetPacificTimeZone()
+    private static TimeZoneInfo GetEasternTimeZone()
     {
         // Windows identifier
-        try { return TimeZoneInfo.FindSystemTimeZoneById("Pacific Standard Time"); }
+        try { return TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"); }
         catch { /* fall through */ }
 
-        // IANA identifier (Linux/macOS — shouldn't be needed on Windows but defensive)
-        try { return TimeZoneInfo.FindSystemTimeZoneById("America/Los_Angeles"); }
+        // IANA identifier
+        try { return TimeZoneInfo.FindSystemTimeZoneById("America/New_York"); }
         catch { /* fall through */ }
 
-        // Hard fallback: UTC-8 (no DST — slightly wrong in summer, acceptable fallback)
+        // Hard fallback: UTC-5 (no DST)
         return TimeZoneInfo.CreateCustomTimeZone(
-            "PT-Fallback", TimeSpan.FromHours(-8), "Pacific (fallback)", "Pacific (fallback)");
+            "ET-Fallback", TimeSpan.FromHours(-5), "Eastern (fallback)", "Eastern (fallback)");
     }
 }
